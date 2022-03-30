@@ -14,6 +14,11 @@
   height: 100vh;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+}
+
 .one-hundred-percent-h {
   height: 100%;
 }
@@ -22,7 +27,7 @@
   height: 100vh;
 }
 
-#box-txt {
+.container {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
@@ -41,7 +46,12 @@
   max-width: 375px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin: 20px;
+}
+
+.caracter{
+    margin-right: 20px;
 }
 
 .txt-binary {
@@ -54,7 +64,11 @@
   padding: 10px;
 }
 
-.values {
+.binary{
+    margin-bottom: 20px;
+}
+
+.box-values {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,18 +126,28 @@
 }
 
 .btn-close {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 100%;
   background-color: #0c1b0c;
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -7px;
+  right: -7px;
   border: 1px solid #65d36e;
+  cursor: pointer;
+}
+
+.one-carater, .one-binary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #65d36e;
+    padding: 10px;
 }
 
 .close {
-  width: 20px;
+  width: 15px;
   fill: #65d36e;
 }
 
