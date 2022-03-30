@@ -1,5 +1,6 @@
 const INPUT = document.querySelector("#button");
 let ibtnClose = 0;
+let btnCLose = [];
 
 console.log(INPUT);
 init();
@@ -9,6 +10,10 @@ function init() {
   INPUT.addEventListener("click", () => {
     containert.innerHTML += templateHTML();
     ibtnClose++;
+    for (let i = 0; i < ibtnClose; i++) {
+      btnCLose[i] = document.querySelector(`#btn-close-${i}`);
+    }
+    console.log(btnCLose);
   });
 }
 
@@ -25,5 +30,9 @@ function templateHTML() {
 }
 
 function displayMessage() {
-  console.log("Hello world" + ibtnClose);
+  for (let i = 0; i < ibtnClose; i++) {
+    btnCLose[i].addEventListener("click", () => {
+      console.log("Hello world" + i);
+    });
+  }
 }
